@@ -3,7 +3,6 @@
     src: url("./assets/Lato-Regular.ttf") format("truetype");
 }
 
-/* TODO: Удалить лишнее из HTML и рефактор кода. */
 * {
     margin: 0 auto;
     padding: 0 0;
@@ -31,9 +30,9 @@
     left: 40px;
     font-size: 30px;
     line-height: 18px;
-    color: #f0d8d9;
     font-weight: 900;
     letter-spacing: 0.008em;
+    color: #f0d8d9;
 }
 
 .quote__description {
@@ -43,10 +42,10 @@
     height: 57px;
     font-size: 18px;
     line-height: 30px;
-    color: #f0d8d9;
+    text-align: justify;
     font-weight: 300;
     letter-spacing: -0.004em;
-    text-align: justify;
+    color: #f0d8d9;
 }
 
 .quote__description>span {
@@ -66,12 +65,12 @@
 
 .form-fieldset label, input, textarea {
     width: 100%;
-    border-radius: 5px;
-    background-color: #d6564f;
-    border: 0;
     height: 38px;
     margin-bottom: 16px;
     line-height: 28px;
+    background-color: #d6564f;
+    border: 0;
+    border-radius: 5px;
 }
 
 .form-fieldset>:hover {
@@ -79,9 +78,9 @@
 }
 
 .form-fieldset>:focus {
+    color: white;
     box-shadow: 0 0 10px purple;
     caret-color: white;
-    color: white;
 }
 
 .form-fieldset>:valid {
@@ -105,22 +104,22 @@ input:invalid:focus {
 .form-fieldset>::placeholder {
     font-size: 12px;
     line-height: 22px;
-    color: #f48c8f;
     font-weight: 400;
+    color: #f48c8f;
 }
 
 .form-fieldset>::-ms-input-placeholder {
     font-size: 12px;
     line-height: 22px;
-    color: #f48c8f;
     font-weight: 400;
+    color: #f48c8f;
 }
 
 .form-fieldset>::-moz-placeholder {
     font-size: 12px;
     line-height: 22px;
-    color: #f48c8f;
     font-weight: 400;
+    color: #f48c8f;
 }
 
 #textarea {
@@ -137,11 +136,11 @@ input:invalid:focus {
     top: 140px;
     right: 161px;
     width: 100px;
-    color: white;
     font-weight: 900;
-    border: 0;
-    text-transform: uppercase;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
 }
 
 #send-button:hover {
@@ -151,9 +150,9 @@ input:invalid:focus {
 }
 
 #send-button:active {
-    box-shadow: 0 0 15px blueviolet;
-    background-color: #50191E;
     color: #4EB5FF;
+    background-color: #50191E;
+    box-shadow: 0 0 15px blueviolet;
 }
 
 .contact-information {
@@ -164,24 +163,24 @@ input:invalid:focus {
     height: 175px;
     font-size: 12px;
     line-height: 22px;
-    color: #f0d8d9;
     font-weight: 400;
     letter-spacing: 0.025em;
+    color: #f0d8d9;
 }
 
 #contact-information__word {
     font-size: 18px;
     line-height: 18px;
-    color: #f0d8d9;
     font-weight: 900;
+    color: #f0d8d9;
 }
 
 #contact-information__text {
     position: relative;
     top: 11px;
-    letter-spacing: -0.003em;
-    text-align: justify;
     line-height: 22px;
+    text-align: justify;
+    letter-spacing: -0.003em;
 }
 
 .address {
@@ -217,14 +216,14 @@ input:invalid:focus {
 
 #address__phone {
     position: relative;
-    left: 5px;
     bottom: 1px;
+    left: 5px;
 }
 
 #address__mail {
     position: relative;
-    left: 3px;
     bottom: 1px;
+    left: 3px;
 }
 
 #tel-link, #mail-link {
@@ -246,30 +245,30 @@ input:invalid:focus {
 }
 
 .copyright-text {
-    color: #666d89;
-    height: 9px;
-    width: 300px;
-    font-size: 12px;
-    letter-spacing: -0.15px;
-    font-weight: 400;
     position: relative;
     top: 30px;
     right: 318px;
+    width: 300px;
+    height: 9px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.15px;
+    color: #666d89;
 }
 
 .footer-social-media {
-    display: flex;
-    width: 160px;
     position: relative;
-    left: 394px;
     top: 13px;
+    left: 394px;
+    display: flex;
     box-sizing: border-box;
+    width: 160px;
 }
 
 .footer-social-media>img:hover {
-    box-shadow: 0 0 12px #4EB5FF;
     background-color: #4EB5FF;
     border-radius: 32px;
+    box-shadow: 0 0 12px #4EB5FF;
     cursor: pointer;
 }
 
@@ -280,7 +279,7 @@ input:invalid:focus {
 /* Special rule for FireFox */
 @-moz-document url-prefix() {
     #form__email, #form__text, #form__subject, #textarea {
-        box-sizing: border-box;
         padding-top: 7px;
+        box-sizing: border-box;
     }
 }
