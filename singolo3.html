@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>singolo3</title>
+    <link href="./singolo3.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <main class="main">
+        <section class="quote-block">
+            <h2 class="quote__name">Get a Quote</h2>
+            <p class="quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+            mollis, non commodo luctus, nisi erat porttitor <span>ligula, eget lacinia odio sem nec elit. Fusce dapibus,
+                    tellus ac cursus commodo, tortor mauris condimentum nibh.</span></p>
+            <form class="quote-form" method="post">
+                <fieldset class="form-fieldset">
+                    <label for="form__text"></label>
+                    <input id="form__text" type="text" name="name" placeholder="Name (Required)" required>
+                    <label for="form__email"></label>
+                    <input id="form__email" type="email" name="email" placeholder="Email (Required)" required>
+                    <label for="form__subject"></label>
+                    <input id="form__subject" type="text" name="subject" placeholder="Subject" >
+                    <label for="textarea"></label>
+                    <textarea id="textarea" name="details" placeholder="Describe your project in detail..."></textarea>
+                </fieldset>
+                <input id= "send-button" type="submit" value="Send" formmethod="post">
+            </form>
+            <div class="contact-information">
+                <h4 id="contact-information__word">Contact Information</h4>
+                <p id="contact-information__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus.
+                Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
+                et consequat felis.</p>
+                <div class="address">
+                    <div>
+                        <img id="address__location-icon" src="./assets/small-location-icon.png" alt="location icon">
+                        <p id="address__location">Elm St. 14/05 Lost City</p>
+                    </div>
+                    <div>
+                        <a id="tel-link" href="tel:03528 331 86 35">
+                            <img id="address__phone-icon" src="./assets/small-phone-icon.png" alt="phone icon">
+                        </a>
+                        <a id="tel-link-full" href="tel:03528 331 86 35"><p id="address__phone">03528 331 86 35</p></a>
+                    </div>
+                    <div>
+                        <a id="mail-link" href="mailto:info@singolo.com">
+                            <img id="address__mail-icon" src="./assets/small-mail-icon.png" alt="mail icon">
+                        </a>
+                        <a id="mail-link-full" href="mailto:info@singolo.com"><p id="address__mail">info@singolo.com</p></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="form__underline">
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="copyright-text">© Copyright 2013 · by PSDchat.com</p>
+        <div class="footer-social-media">
+            <img src="./assets/logo-facebook.png" alt="Facebook logo">
+            <img src="./assets/logo-google+.png" alt="Google Plus logo">
+            <img src="./assets/logo-twitter.png" alt="Twitter logo">
+            <img src="./assets/logo-linkedin.png" alt="LinkedIn logo">
+        </div>
+    </footer>
+</body>
+</html>
