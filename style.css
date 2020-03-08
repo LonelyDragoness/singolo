@@ -222,6 +222,8 @@
     width: 300px;
     height: 87px;
     min-width: 0;
+    overflow: hidden;
+    text-overflow: clip;
 }
 
 .column {
