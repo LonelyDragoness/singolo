@@ -825,4 +825,7 @@
         padding-top: 7px;
         box-sizing: border-box;
     }
+    .validation:invalid:focus {
+        border: 0;
+    }
 }
