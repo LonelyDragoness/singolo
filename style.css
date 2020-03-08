@@ -613,6 +613,7 @@
 .form-fieldset>:focus {
     color: white;
     box-shadow: 0 0 10px purple;
+    outline: none;
     caret-color: white;
 }
 
