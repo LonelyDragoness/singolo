@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 <head>
     <meta charset="UTF-8">
     <title>Singolo</title>
     <link href="./style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <h1 id="logo">SINGOLO</h1>
         <nav>
-            <ul class="navigation">
-                <li>HOME</li>
-                <li class="nav__dot">SERVICES</li>
-                <li class="nav__dot">PORTFOLIO</li>
-                <li class="nav__dot">ABOUT</li>
-                <li class="nav__dot">CONTACT</li>
+            <ul class="navigation" id="navigation">
+                <li class="active" id="home-button">HOME</li>
+                <li class="nav__dot" id="services-button">SERVICES</li>
+                <li class="nav__dot" id="portfolio-button">PORTFOLIO</li>
+                <li class="nav__dot" id="about-button">ABOUT</li>
+                <li class="nav__dot" id="contact-button">CONTACT</li>
             </ul>
         </nav>
     </header>
 
     <main class="main">
         <section class="slider">
-            <figure class="vertical-image">
-                <img class="vertical__phone" src="./assets/phone.png" alt="phone">
-                <img class="vertical__screen" src="./assets/vertical-screen.png" alt="">
+            <figure class="vertical-image" id="vertical-image">
+                <img class="vertical__phone" id="vertical-phone" src="./assets/phone.png" alt="phone">
+                <img class="vertical__screen" id="vertical-screen" src="./assets/vertical-screen.png" alt="">
                 <img class="vertical__shadow" src="./assets/vertical-shadow.png" alt="">
             </figure>
-            <figure class="horizontal-image">
-                <img class="horizontal-phone" src="./assets/phone.png" alt="phone">
-                <img class="horizontal-screen" src="./assets/horizontal-screen.png" alt="">
+            <figure class="horizontal-image" id="horizontal-image">
+                <img class="horizontal-phone" id="horizontal-phone" src="./assets/phone.png" alt="phone">
+                <img class="horizontal-screen" id="horizontal-screen" src="./assets/horizontal-screen.png" alt="">
                 <img class="horizontal-shadow" src="./assets/horizontal-shadow.png" alt="">
             </figure>
             <div class="arrows">
@@ -84,38 +84,39 @@
         <div class="layout-underline"></div>
         <div class="header-underline"></div>
         <div class="slider-underline"></div>
+        <div id="services-block"></div>
 
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <h2 class="portfolio__word">Portfolio</h2>
             <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
                 odio sem nec elit.</p>
-            <ul class="portfolio__buttons">
-                <li class="button" id="all_button"><p>All</p></li>
-                <li class="button" id="web-design__button"><p>Web Design</p></li>
-                <li class="button" id="graphic-design__button"><p>Graphic Design</p></li>
-                <li class="button" id="artwork_button"><p>Artwork</p></li>
+            <ul class="portfolio__buttons" id="portfolio__buttons">
+                <li class="button active-portfolio" id="all_button">All</li>
+                <li class="button" id="web-design__button">Web Design</li>
+                <li class="button" id="graphic-design__button">Graphic Design</li>
+                <li class="button" id="artwork_button">Artwork</li>
             </ul>
             <div>
-                <ul class="portfolio__images">
-                    <li><img src="./assets/img1.png" alt="artwork"></li>
-                    <li><img class="margin-2-6-10" src="./assets/img2.png" alt="artwork"></li>
-                    <li><img class="margin-3-7-11" src="./assets/img3.png" alt="artwork"></li>
-                    <li><img class="margin-4-8-12" src="./assets/img4.png" alt="artwork"></li>
-                    <li><img src="./assets/img5.png" alt="artwork"></li>
-                    <li><img class="margin-2-6-10" src="./assets/img6.png" alt="artwork"></li>
-                    <li><img class="margin-3-7-11" src="./assets/img7.png" alt="artwork"></li>
-                    <li><img class=" margin-4-8-12" src="./assets/img8.png" alt="artwork"></li>
-                    <li><img src="./assets/img9.png" alt="artwork"></li>
-                    <li><img class="margin-2-6-10" src="./assets/img10.png" alt="artwork"></li>
-                    <li><img class="margin-3-7-11" src="./assets/img11.png" alt="artwork"></li>
-                    <li><img class="margin-4-8-12" src="./assets/img12.png" alt="artwork"></li>
+                <ul class="portfolio__images" id="portfolio-pictures">
+                    <li><img id="pic1" class="pic" src="./assets/img1.png" alt="artwork"></li>
+                    <li><img id="pic2" class="pic margin-2-6-10" src="./assets/img2.png" alt="artwork"></li>
+                    <li><img id="pic3" class="pic margin-3-7-11" src="./assets/img3.png" alt="artwork"></li>
+                    <li><img id="pic4" class="pic margin-4-8-12" src="./assets/img4.png" alt="artwork"></li>
+                    <li><img id="pic5" class="pic" src="./assets/img5.png" alt="artwork"></li>
+                    <li><img id="pic6" class="pic margin-2-6-10" src="./assets/img6.png" alt="artwork"></li>
+                    <li><img id="pic7" class="pic margin-3-7-11" src="./assets/img7.png" alt="artwork"></li>
+                    <li><img id="pic8" class="pic margin-4-8-12" src="./assets/img8.png" alt="artwork"></li>
+                    <li><img id="pic9" class="pic" src="./assets/img9.png" alt="artwork"></li>
+                    <li><img id="pic10" class="pic margin-2-6-10" src="./assets/img10.png" alt="artwork"></li>
+                    <li><img id="pic11" class="pic margin-3-7-11" src="./assets/img11.png" alt="artwork"></li>
+                    <li><img id="pic12" class="pic margin-4-8-12" src="./assets/img12.png" alt="artwork"></li>
                 </ul>
             </div>
         </section>
         <div class="portfolio__underline">
         </div>
 
-        <section class="about-us">
+        <section class="about-us" id="about-us">
             <h2 class="about-us__heading">About Us</h2>
             <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
                 non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus,
@@ -162,12 +163,12 @@
         <div class="about-us-underline">
         </div>
 
-        <section class="quote-block">
+        <section class="quote-block" id="quote-block">
             <h2 class="quote__name">Get a Quote</h2>
             <p class="quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
                 mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
                     dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <form class="quote-form" method="post" action="https://www.w3schools.com/action_page.php">
+            <form id="quote-form" class="quote-form" method="post">
                 <fieldset class="form-fieldset">
                     <label for="form__text"></label>
                     <input class="validation" id="form__text" type="text" name="name" placeholder="Name (Required)"
@@ -180,8 +181,9 @@
                     <label for="textarea"></label>
                     <textarea id="textarea" name="details" placeholder="Describe your project in detail..."></textarea>
                 </fieldset>
-                <input id= "send-button" type="submit" value="Submit" formmethod="post">
+                <input id= "send-button" type="submit" value="Submit">
             </form>
+
             <div class="contact-information">
                 <h4 id="contact-information__word">Contact Information</h4>
                 <p id="contact-information__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh.
@@ -209,12 +211,16 @@
                 </div>
             </div>
         </section>
+        <div id="send-message-block" class="currently-disabled">
+            <p id="submit-message">Письмо отправлено</p>
+            <button id="exit-button">OK</button>
+        </div>
         <div class="form__underline">
         </div>
     </main>
 
     <footer class="footer">
-        <p class="copyright-text">© Copyright 2013 · by PSDchat.com</p>
+        <p class="copyright-text">© Copyright 2013</p>
         <div class="footer-social-media">
             <img src="./assets/logo-facebook.png" alt="Facebook logo">
             <img src="./assets/logo-google+.png" alt="Google Plus logo">
@@ -222,5 +228,6 @@
             <img src="./assets/logo-linkedin.png" alt="LinkedIn logo">
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
