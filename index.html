@@ -20,20 +20,27 @@
     </header>
 
     <main class="main">
-        <section class="slider">
-            <figure class="vertical-image" id="vertical-image">
-                <img class="vertical__phone" id="vertical-phone" src="./assets/phone.png" alt="phone">
-                <img class="vertical__screen" id="vertical-screen" src="./assets/vertical-screen.png" alt="">
-                <img class="vertical__shadow" src="./assets/vertical-shadow.png" alt="">
-            </figure>
-            <figure class="horizontal-image" id="horizontal-image">
-                <img class="horizontal-phone" id="horizontal-phone" src="./assets/phone.png" alt="phone">
-                <img class="horizontal-screen" id="horizontal-screen" src="./assets/horizontal-screen.png" alt="">
-                <img class="horizontal-shadow" src="./assets/horizontal-shadow.png" alt="">
-            </figure>
+        <section id="slider" class="slider">
+            <div id="wrapper-slider" class="wrapper-slider">
+                <div class="slide first-slide">
+                    <figure class="vertical-image" id="vertical-image">
+                        <img class="vertical__phone" id="vertical-phone" src="./assets/phone.png" alt="phone">
+                        <img class="vertical__screen" id="vertical-screen" src="./assets/vertical-screen.png" alt="">
+                        <img class="vertical__shadow" src="./assets/vertical-shadow.png" alt="">
+                    </figure>
+                    <figure class="horizontal-image" id="horizontal-image">
+                        <img class="horizontal-phone" id="horizontal-phone" src="./assets/phone.png" alt="phone">
+                        <img class="horizontal-screen" id="horizontal-screen" src="./assets/horizontal-screen.png" alt="">
+                        <img class="horizontal-shadow" src="./assets/horizontal-shadow.png" alt="">
+                    </figure>
+                </div>
+                <div class="slide second-slide">
+                    <img src="./assets/second-slide.png" alt="phones">
+                </div>
+            </div>
             <div class="arrows">
-                <img class="arrow__left" src="./assets/arrow-left.png" alt="">
-                <img class="arrow__right" src="./assets/arrow-right.png" alt="">
+                <img id="prev" class="arrow__left" src="./assets/arrow-left.png" alt="">
+                <img id="next" class="arrow__right" src="./assets/arrow-right.png" alt="">
             </div>
         </section>
 
@@ -83,7 +90,7 @@
         </section>
         <div class="layout-underline"></div>
         <div class="header-underline"></div>
-        <div class="slider-underline"></div>
+<!--        <div id="slider-underline" class="slider-underline"></div>-->
         <div id="services-block"></div>
 
         <section class="portfolio" id="portfolio">

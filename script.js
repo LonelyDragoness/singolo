@@ -56,6 +56,119 @@ document.getElementById("contact-button").addEventListener("click", (event) => {
 
 // 2. Carousel.
 
+let slideNow = function() {
+    let slider = document.getElementById("slider");
+    let sliderWidth = slider.offsetWidth;
+    let slideList = document.getElementById("wrapper-slider");
+    let count = 1;
+    let items = 2;
+    let prev =document.getElementById("prev");
+    let next =document.getElementById("next");
+
+    window.addEventListener("resize", function() {
+        sliderWidth = slider.offsetWidth;
+    });
+
+    let prevSlide = function() {
+        if (count > 1) {
+            count = count - 2;
+            slideList.style.left = "-" + count * sliderWidth + "px";
+            count++;
+        } else if (count === 1) {
+            count = items - 1 ;
+            slideList.style.left = "-" + count * sliderWidth + "px";
+            count++;
+        }
+    };
+
+    let nextSlide = function() {
+        if (count < items) {
+            slideList.style.left = "-" + count * sliderWidth + "px";
+            count++;
+        } else if (count === items) {
+            slideList.style.left = "0px";
+            count = 1;
+        }
+    };
+
+    next.addEventListener("click", function() {
+        nextSlide();
+    });
+
+    prev.addEventListener("click", function() {
+        prevSlide();
+    });
+};
+
+window.onload = function() {
+    slideNow()
+};
+
+/* >>>>>>>>>>>>>>>>>>First try (FAIL T_T).
+let prev = document.getElementById("previous");
+let next = document.getElementById("next");
+let slideElements = document.getElementById("wrapper-slider");
+let slider = document.getElementById("slider");
+
+function slide(wrapper, items, prev, next) {
+    let posInitial,
+        slides = items.getElementsByClassName("slide"),
+        slidesLength = slides.length,
+        slideSize = items.getElementsByClassName("slide")[0].offsetWidth,
+        firstSlide = slides[0],
+        lastSlide = slides[slidesLength - 1],
+        cloneFirst = firstSlide.cloneNode(true),
+        cloneLast = lastSlide.cloneNode(true),
+        index = 0,
+        allowShift = true;
+
+        items.appendChild(cloneFirst);
+        items.insertBefore(cloneLast);
+
+    prev.addEventListener('click', function () { shiftSlide(-1) });
+    next.addEventListener('click', function () { shiftSlide(1) });
+
+    items.addEventListener('transitionend', checkIndex);
+
+    function shiftSlide(dir, action) {
+        items.classList.add('shifting');
+
+        if (allowShift) {
+            if (!action) {
+                posInitial = items.offsetLeft;
+            }
+            if (dir === 1) {
+                items.style.left = (posInitial - slideSize) + "px";
+                index++;
+            } else if (dir === -1) {
+                items.style.left = (posInitial + slideSize) + "px";
+                index--;
+            }
+        }
+        allowShift = false;
+    }
+
+    function checkIndex (){
+        items.classList.remove('shifting');
+
+        if (index === -1) {
+            items.style.left = -(slidesLength * slideSize) + "px";
+            index = slidesLength - 1;
+        }
+
+        if (index === slidesLength) {
+            items.style.left = -(1 * slideSize) + "px";
+            index = 0;
+        }
+
+        allowShift = true;
+    }
+}
+slide(slider, slideElements, prev, next);
+*/
+
+
+
 // 3. Phone screen activation
 let verticalStatus = 'on';
 let horizontalStatus = 'on';
@@ -112,6 +225,7 @@ const PORTFOLIO_BUTTONS = document.getElementById("portfolio__buttons").querySel
 // 4.1 All button
 PORTFOLIO_ALL_BUTTON.addEventListener("click", (event) => {
     PORTFOLIO_BUTTONS.forEach(el => el.classList.remove("active-portfolio"));
+    PORTFOLIO_IMAGES.querySelectorAll("li>img").forEach(el => el.classList.remove('chosen-picture'));
     event.target.classList.add("active-portfolio");
     document.getElementById('pic1').src = './assets/img1.png';
     document.getElementById('pic2').src = './assets/img2.png';
@@ -130,6 +244,7 @@ PORTFOLIO_ALL_BUTTON.addEventListener("click", (event) => {
 // 4.2 Web design button
 WEB_DESIGN_BUTTON.addEventListener("click", (event) => {
     PORTFOLIO_BUTTONS.forEach(el => el.classList.remove("active-portfolio"));
+    PORTFOLIO_IMAGES.querySelectorAll("li>img").forEach(el => el.classList.remove('chosen-picture'));
     event.target.classList.add("active-portfolio");
     document.getElementById('pic1').src = './assets/img4.png';
     document.getElementById('pic2').src = './assets/img5.png';
@@ -148,6 +263,7 @@ WEB_DESIGN_BUTTON.addEventListener("click", (event) => {
 // 4.3 Web design button
 GRAPHIC_DESIGN_BUTTON.addEventListener("click", (event) => {
     PORTFOLIO_BUTTONS.forEach(el => el.classList.remove("active-portfolio"));
+    PORTFOLIO_IMAGES.querySelectorAll("li>img").forEach(el => el.classList.remove('chosen-picture'));
     event.target.classList.add("active-portfolio");
     document.getElementById('pic1').src = './assets/img7.png';
     document.getElementById('pic2').src = './assets/img8.png';
@@ -166,6 +282,7 @@ GRAPHIC_DESIGN_BUTTON.addEventListener("click", (event) => {
 // 4.4 Web design button
 ARTWORK_BUTTON.addEventListener("click", (event) => {
     PORTFOLIO_BUTTONS.forEach(el => el.classList.remove("active-portfolio"));
+    PORTFOLIO_IMAGES.querySelectorAll("li>img").forEach(el => el.classList.remove('chosen-picture'));
     event.target.classList.add("active-portfolio");
     document.getElementById('pic1').src = './assets/img10.png';
     document.getElementById('pic2').src = './assets/img11.png';

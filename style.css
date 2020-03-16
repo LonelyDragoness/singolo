@@ -10,7 +10,7 @@
 }
 
 html, body {
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 .header, .main, .header-underline, .navigation, .layout-underline, .footer {
@@ -144,8 +144,8 @@ html, body {
 
 .horizontal-shadow {
     position: relative;
-    bottom: 768px;
-    left: 426px;
+    bottom: 525px;/*bottom: 768px;*/
+    right: 134px; /*left: 426px;*/
     z-index: 1;
     width: 483px;
     height: 240px;
@@ -921,4 +921,43 @@ li.active-portfolio:hover {
 
 .modal-active {
     overflow: hidden;
+}
+
+/* Slider */
+.wrapper-slider {
+    position: relative;
+    left: 0;
+    width: 9999%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    transition: all .6s ease;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    position: relative;
+    float: left;
+    width: calc(80vw);
+    height: 100%;
+}
+
+.second-slide {
+    top: 6px;
+    right: 516px;
+}
+
+#prev, #next {
+    position: relative;
+    bottom: 313px;
+    z-index: 999;
+}
+
+.arrows {
+    position: relative;
+    z-index: 998;
 }
