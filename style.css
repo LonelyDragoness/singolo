@@ -923,45 +923,6 @@ li.active-portfolio:hover {
     overflow: hidden;
 }
 
-/* Slider */
-/*.wrapper-slider {
-    position: relative;
-    left: 0;
-    width: 9999%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    transition: all .6s ease;
-}
-
-.slider {
-    width: 100%;
-    overflow: hidden;
-}
-
-.slide {
-    position: relative;
-    float: left;
-    width: calc(80vw);
-    height: 100%;
-}
-
-.second-slide {
-    top: 6px;
-    right: 516px;
-}
-
-#prev, #next {
-    position: relative;
-    bottom: 313px;
-    z-index: 999;
-}
-
-.arrows {
-    position: relative;
-    z-index: 998;
-}*/
-
 .slider {
     display: flex;
     width: 100%;
@@ -984,7 +945,6 @@ li.active-portfolio:hover {
 
 #prev, #next {
     z-index: 999;
-
 }
 
 .arrows {

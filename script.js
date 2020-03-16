@@ -62,11 +62,6 @@ const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 let direction;
 
-console.log(carousel);
-console.log(slider);
-console.log(next);
-console.log(prev);
-
 next.addEventListener('click', function() {
     direction = -1;
     carousel.style.justifyContent = 'flex-start';
@@ -80,17 +75,13 @@ prev.addEventListener('click', function() {
     }
     carousel.style.justifyContent = 'flex-end';
     slider.style.transform = 'translate(50%)';
-
 });
 
 slider.addEventListener('transitionend', function() {
-    // get the last element and append it to the front
-
     if (direction === 1) {
         slider.prepend(slider.lastElementChild);
     } else {
         slider.appendChild(slider.firstElementChild);
-        // document.getElementById("arrows").classList.add("arrow_movement");
     }
 
     slider.style.transition = 'none';
