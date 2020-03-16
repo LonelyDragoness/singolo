@@ -55,54 +55,50 @@ document.getElementById("contact-button").addEventListener("click", (event) => {
 });
 
 // 2. Carousel.
+const carousel = document.querySelector('.slider');
+const slider = document.querySelector('.wrapper-slider');
 
-let slideNow = function() {
-    let slider = document.getElementById("slider");
-    let sliderWidth = slider.offsetWidth;
-    let slideList = document.getElementById("wrapper-slider");
-    let count = 1;
-    let items = 2;
-    let prev =document.getElementById("prev");
-    let next =document.getElementById("next");
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+let direction;
 
-    window.addEventListener("resize", function() {
-        sliderWidth = slider.offsetWidth;
-    });
+console.log(carousel);
+console.log(slider);
+console.log(next);
+console.log(prev);
 
-    let prevSlide = function() {
-        if (count > 1) {
-            count = count - 2;
-            slideList.style.left = "-" + count * sliderWidth + "px";
-            count++;
-        } else if (count === 1) {
-            count = items - 1 ;
-            slideList.style.left = "-" + count * sliderWidth + "px";
-            count++;
-        }
-    };
+next.addEventListener('click', function() {
+    direction = -1;
+    carousel.style.justifyContent = 'flex-start';
+    slider.style.transform = 'translate(-50%)';
+});
 
-    let nextSlide = function() {
-        if (count < items) {
-            slideList.style.left = "-" + count * sliderWidth + "px";
-            count++;
-        } else if (count === items) {
-            slideList.style.left = "0px";
-            count = 1;
-        }
-    };
+prev.addEventListener('click', function() {
+    if (direction === -1) {
+        direction = 1;
+        slider.appendChild(slider.firstElementChild);
+    }
+    carousel.style.justifyContent = 'flex-end';
+    slider.style.transform = 'translate(50%)';
 
-    next.addEventListener("click", function() {
-        nextSlide();
-    });
+});
 
-    prev.addEventListener("click", function() {
-        prevSlide();
-    });
-};
+slider.addEventListener('transitionend', function() {
+    // get the last element and append it to the front
 
-window.onload = function() {
-    slideNow()
-};
+    if (direction === 1) {
+        slider.prepend(slider.lastElementChild);
+    } else {
+        slider.appendChild(slider.firstElementChild);
+        // document.getElementById("arrows").classList.add("arrow_movement");
+    }
+
+    slider.style.transition = 'none';
+    slider.style.transform = 'translate(0)';
+    setTimeout(() => {
+        slider.style.transition = 'all 0.5s';
+    })
+}, false);
 
 // 3. Phone screen activation
 let verticalStatus = 'on';
