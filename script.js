@@ -57,9 +57,12 @@ const slider = document.querySelector('.wrapper-slider');
 
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
-let direction;
+let direction = -1;
 
 next.addEventListener('click', function() {
+    if (direction === 1) {
+        slider.appendChild(slider.firstElementChild);
+    }
     direction = -1;
     carousel.style.justifyContent = 'flex-start';
     slider.style.transform = 'translate(-50%)';
