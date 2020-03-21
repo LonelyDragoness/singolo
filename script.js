@@ -1,4 +1,3 @@
-document.body.style.zoom = "1.0";
 // 1. Header navigation.
 // 1.1 Smooth scroll to sections.
 let y = 0;
