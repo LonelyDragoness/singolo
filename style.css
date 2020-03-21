@@ -929,7 +929,7 @@ li.active-portfolio:hover {
 }
 
 .modal-active {
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .slider {
