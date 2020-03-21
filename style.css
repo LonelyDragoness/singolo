@@ -22,6 +22,7 @@ html, body {
     position: fixed;
     z-index: 1000;
     width: 100%;
+    border-bottom: 6px solid #323746;
 }
 
 .empty-header {
@@ -32,10 +33,11 @@ html, body {
     position: relative;
     top: 89px;
 }
+
 #logo {
     position: relative;
     bottom:1px;
-    left: 22%;
+    left: 23%;
     margin-left: 40px;
     font-size: 24px;
     line-height: 6px;
@@ -159,8 +161,8 @@ html, body {
 
 .horizontal-shadow {
     position: relative;
-    bottom: 525px;/*bottom: 768px;*/
-    right: 134px; /*left: 426px;*/
+    right: 134px;
+    bottom: 525px;
     z-index: 1;
     width: 483px;
     height: 240px;
@@ -171,17 +173,17 @@ html, body {
 }
 
 .arrow__left {
-    position: relative;
-    bottom: 904px;
-    left: 42px;
+    position: absolute;
+    top: 287px;
+    right: 962px;
     width: 16px;
     height: 27px;
 }
 
 .arrow__right {
-    position: relative;
-    bottom: 904px;
-    left: 945px;
+    position: absolute;
+    top: 287px;
+    right: 40px;
     width: 16px;
     height: 27px;
 }
@@ -192,12 +194,6 @@ html, body {
     opacity: 0.5;
     cursor: pointer;
 }
-
-/*#services-block {
-    position: relative;
-    bottom: 594px;
-    height: 6px;
-}*/
 
 /* Our Services section */
 .services>h2 {
@@ -390,6 +386,7 @@ html, body {
 .portfolio__images {
     position: relative;
     top: 99px;
+    left: 8px;
     display: flex;
     flex-wrap: wrap;
     width: 980px;
@@ -814,29 +811,6 @@ html, body {
     color: purple;
 }
 
-/* Anchors
-#anchor-1 {
-    visibility: hidden;
-    position: relative;
-    bottom: 2852px;
-    height: 499px;
-
-}
-
-#anchor-2 {
-    visibility: hidden;
-    position: relative;
-    bottom: 2852px;
-    height: 864px;
-}
-
-#anchor-3 {
-    visibility: hidden;
-    position: relative;
-    bottom: 2847px;
-    height: 728px;
-} */
-
 /* Footer section */
 .footer {
     position: relative;
@@ -962,6 +936,7 @@ li.active-portfolio:hover {
 }
 
 .slider {
+    position: relative;
     display: flex;
     width: 100%;
     overflow: hidden;
@@ -983,16 +958,6 @@ li.active-portfolio:hover {
 
 #prev, #next {
     z-index: 999;
-}
-
-.arrows {
-    position: absolute;
-    top: 1280px;
-    z-index: 998;
-}
-
-.arrow_movement {
-    right: 1426px;
 }
 
 .horizontal-shadow {
