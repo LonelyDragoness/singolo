@@ -20,6 +20,8 @@
     </header>
 
     <main class="main">
+        <div class="empty-header scroll-anchor" id="empty-header" data-tag="home-button">
+        </div>
         <section id="slider" class="slider">
             <div id="wrapper-slider" class="wrapper-slider">
                 <div class="slide first-slide">
@@ -44,7 +46,7 @@
             </div>
         </section>
 
-        <section class="services" id="services">
+        <section class="services scroll-anchor" id="services-block"  data-tag="services-button">
             <h2>Our Services</h2>
             <p class="services__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
                 non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
@@ -90,10 +92,10 @@
         </section>
         <div class="layout-underline"></div>
         <div class="header-underline"></div>
-<!--        <div id="slider-underline" class="slider-underline"></div>-->
-        <div id="services-block"></div>
+        <div id="slider-underline" class="slider-underline"></div>
+        <div class="scroll-anchor"></div>
 
-        <section class="portfolio" id="portfolio">
+        <section class="portfolio scroll-anchor" id="portfolio" data-tag="portfolio-button">
             <h2 class="portfolio__word">Portfolio</h2>
             <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
                 odio sem nec elit.</p>
@@ -105,25 +107,25 @@
             </ul>
             <div>
                 <ul class="portfolio__images" id="portfolio-pictures">
-                    <li><img id="pic1" class="pic" src="./assets/img1.png" alt="artwork"></li>
-                    <li><img id="pic2" class="pic margin-2-6-10" src="./assets/img2.png" alt="artwork"></li>
-                    <li><img id="pic3" class="pic margin-3-7-11" src="./assets/img3.png" alt="artwork"></li>
-                    <li><img id="pic4" class="pic margin-4-8-12" src="./assets/img4.png" alt="artwork"></li>
-                    <li><img id="pic5" class="pic" src="./assets/img5.png" alt="artwork"></li>
-                    <li><img id="pic6" class="pic margin-2-6-10" src="./assets/img6.png" alt="artwork"></li>
-                    <li><img id="pic7" class="pic margin-3-7-11" src="./assets/img7.png" alt="artwork"></li>
-                    <li><img id="pic8" class="pic margin-4-8-12" src="./assets/img8.png" alt="artwork"></li>
-                    <li><img id="pic9" class="pic" src="./assets/img9.png" alt="artwork"></li>
-                    <li><img id="pic10" class="pic margin-2-6-10" src="./assets/img10.png" alt="artwork"></li>
-                    <li><img id="pic11" class="pic margin-3-7-11" src="./assets/img11.png" alt="artwork"></li>
-                    <li><img id="pic12" class="pic margin-4-8-12" src="./assets/img12.png" alt="artwork"></li>
+                    <li><img id="pic1" src="./assets/img1.png" alt="artwork"></li>
+                    <li><img id="pic2" class="margin-2-6-10" src="./assets/img2.png" alt="artwork"></li>
+                    <li><img id="pic3" class="margin-3-7-11" src="./assets/img3.png" alt="artwork"></li>
+                    <li><img id="pic4" class="margin-4-8-12" src="./assets/img4.png" alt="artwork"></li>
+                    <li><img id="pic5" src="./assets/img5.png" alt="artwork"></li>
+                    <li><img id="pic6" class="margin-2-6-10" src="./assets/img6.png" alt="artwork"></li>
+                    <li><img id="pic7" class="margin-3-7-11" src="./assets/img7.png" alt="artwork"></li>
+                    <li><img id="pic8" class="margin-4-8-12" src="./assets/img8.png" alt="artwork"></li>
+                    <li><img id="pic9"  src="./assets/img9.png" alt="artwork"></li>
+                    <li><img id="pic10" class="margin-2-6-10" src="./assets/img10.png" alt="artwork"></li>
+                    <li><img id="pic11" class="margin-3-7-11" src="./assets/img11.png" alt="artwork"></li>
+                    <li><img id="pic12" class="margin-4-8-12" src="./assets/img12.png" alt="artwork"></li>
                 </ul>
             </div>
         </section>
         <div class="portfolio__underline">
         </div>
 
-        <section class="about-us" id="about-us">
+        <section class="about-us scroll-anchor" id="about-us" data-tag="about-button">
             <h2 class="about-us__heading">About Us</h2>
             <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
                 non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus,
@@ -170,7 +172,7 @@
         <div class="about-us-underline">
         </div>
 
-        <section class="quote-block" id="quote-block">
+        <section class="quote-block scroll-anchor" id="quote-block" data-tag="contact-button">
             <h2 class="quote__name">Get a Quote</h2>
             <p class="quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
                 mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
@@ -224,6 +226,11 @@
         </div>
         <div class="form__underline">
         </div>
+        <!--<div class="invisible-anchors">
+            <div class="anchor-helper" id="anchor-1" data-tag="services-button"></div>
+            <div class="anchor-helper" id="anchor-2" data-tag="portfolio-button"></div>
+            <div class="anchor-helper" id="anchor-3" data-tag="about-button"></div>
+        </div>-->
     </main>
 
     <footer class="footer">

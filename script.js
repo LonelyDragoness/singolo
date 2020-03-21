@@ -1,41 +1,7 @@
 // 1. Header navigation
-// 1.1 Mark buttons with active color.
-const NAVIGATION = document.getElementById("navigation");
-const HOME_BUTTON = document.getElementById("home-button");
-const SERVICES_BUTTON = document.getElementById("services-button");
-const PORTFOLIO_BUTTON = document.getElementById("portfolio-button");
-const ABOUT_BUTTON = document.getElementById("about-button");
-const CONTACT_BUTTON = document.getElementById("contact-button");
-const LIST_ELEMENTS = NAVIGATION.querySelectorAll('li');
-
-HOME_BUTTON.addEventListener("click", (event) => {
-    LIST_ELEMENTS.forEach(el => el.classList.remove('active'));
-    event.target.classList.add("active");
-});
-
-SERVICES_BUTTON.addEventListener("click", (event) => {
-    LIST_ELEMENTS.forEach(el => el.classList.remove('active'));
-    event.target.classList.add("active");
-});
-
-PORTFOLIO_BUTTON.addEventListener("click", (event) => {
-    LIST_ELEMENTS.forEach(el => el.classList.remove('active'));
-    event.target.classList.add("active");
-});
-
-ABOUT_BUTTON.addEventListener("click", (event) => {
-    LIST_ELEMENTS.forEach(el => el.classList.remove('active'));
-    event.target.classList.add("active");
-});
-
-CONTACT_BUTTON.addEventListener("click", (event) => {
-    LIST_ELEMENTS.forEach(el => el.classList.remove('active'));
-    event.target.classList.add("active");
-});
-
-// 1.2 Smooth scroll to sections.
+// 1.1 Smooth scroll to sections.
 document.getElementById("home-button").addEventListener("click", (event) => {
-    document.getElementById("header").scrollIntoView({behavior: "smooth"});
+    document.getElementById("empty-header").scrollIntoView({behavior: "smooth"});
 });
 
 document.getElementById("services-button").addEventListener("click", (event) => {
@@ -53,6 +19,29 @@ document.getElementById("about-button").addEventListener("click", (event) => {
 document.getElementById("contact-button").addEventListener("click", (event) => {
     document.getElementById("quote-block").scrollIntoView({behavior: "smooth"});
 });
+
+// 1.2 Active highlight
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+    const currentPosition = window.scrollY;
+    const divs = document.querySelectorAll('.scroll-anchor');
+    const links = document.querySelectorAll('#navigation>li');
+
+    divs.forEach((el) => {
+        if (el.offsetTop <= currentPosition && (el.offsetTop + el.offsetHeight) > currentPosition) {
+            links.forEach((li) => {
+                li.classList.remove('active');
+                if (el.getAttribute('data-tag') === li.getAttribute('id')) {
+                    li.classList.add('active');
+                } else if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                    document.getElementById('about-button').classList.remove('active');
+                    document.getElementById('contact-button').classList.add('active');
+                }
+            })
+        }
+    });
+}
 
 // 2. Carousel.
 const carousel = document.querySelector('.slider');
@@ -149,18 +138,31 @@ PORTFOLIO_ALL_BUTTON.addEventListener("click", (event) => {
     PORTFOLIO_BUTTONS.forEach(el => el.classList.remove("active-portfolio"));
     PORTFOLIO_IMAGES.querySelectorAll("li>img").forEach(el => el.classList.remove('chosen-picture'));
     event.target.classList.add("active-portfolio");
-    document.getElementById('pic1').src = './assets/img1.png';
-    document.getElementById('pic2').src = './assets/img2.png';
-    document.getElementById('pic3').src = './assets/img3.png';
-    document.getElementById('pic4').src = './assets/img4.png';
-    document.getElementById('pic5').src = './assets/img5.png';
-    document.getElementById('pic6').src = './assets/img6.png';
-    document.getElementById('pic7').src = './assets/img7.png';
-    document.getElementById('pic8').src = './assets/img8.png';
-    document.getElementById('pic9').src = './assets/img9.png';
-    document.getElementById('pic10').src = './assets/img10.png';
-    document.getElementById('pic11').src = './assets/img11.png';
-    document.getElementById('pic12').src = './assets/img12.png';
+
+    let container = document.getElementById('portfolio-pictures');
+    let childrenElements= [];
+    for (let i = 0; i < container.children.length; i++) {
+        childrenElements.push(container.children[i]);
+    }
+
+    childrenElements.sort(function() {
+        return Math.random() - 0.5;
+    });
+
+    for (let i = 0; i < childrenElements.length; i++) {
+        container.appendChild(childrenElements[i]);
+    }
+    // Забористая дичь по испралению костылей с марджинами.
+    PORTFOLIO_IMAGES.querySelectorAll("li").forEach(el => el.className="");
+    document.getElementById('pic1').classList.add("margin-2-6-10");
+    document.getElementById('pic6').classList.add("margin-2-6-10");
+    document.getElementById('pic10').classList.add("margin-2-6-10");
+    document.getElementById('pic3').classList.add("margin-3-7-11");
+    document.getElementById('pic7').classList.add("margin-3-7-11");
+    document.getElementById('pic11').classList.add("margin-3-7-11");
+    document.getElementById('pic4').classList.add("margin-4-8-12");
+    document.getElementById('pic8').classList.add("margin-4-8-12");
+    document.getElementById('pic12').classList.add("margin-4-8-12");
 });
 
 // 4.2 Web design button

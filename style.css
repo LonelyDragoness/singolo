@@ -18,10 +18,24 @@ html, body {
 }
 
 /* Header section */
+.header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+.empty-header {
+    height: 89px;
+}
+
+.main .footer {
+    position: relative;
+    top: 89px;
+}
 #logo {
     position: relative;
     bottom:1px;
-    left:1px;
+    left: 22%;
     margin-left: 40px;
     font-size: 24px;
     line-height: 6px;
@@ -37,7 +51,8 @@ html, body {
 }
 
 .navigation {
-    margin-left: 453px;
+    position: relative;
+    margin-left: 40%;
     padding-top: 46px;
     padding-bottom: 40px;
 }
@@ -93,7 +108,7 @@ html, body {
     bottom: 506px;
     z-index: 10;
     height: 6px;
-    background-color: #ea676b;
+    background-color: #F2F2F2
 }
 
 .vertical__phone {
@@ -178,11 +193,11 @@ html, body {
     cursor: pointer;
 }
 
-#services-block {
-    position: absolute;
-    bottom: 219px;
+/*#services-block {
+    position: relative;
+    bottom: 594px;
     height: 6px;
-}
+}*/
 
 /* Our Services section */
 .services>h2 {
@@ -798,6 +813,29 @@ html, body {
 #tel-link-full:hover, #mail-link-full:hover {
     color: purple;
 }
+
+/* Anchors
+#anchor-1 {
+    visibility: hidden;
+    position: relative;
+    bottom: 2852px;
+    height: 499px;
+
+}
+
+#anchor-2 {
+    visibility: hidden;
+    position: relative;
+    bottom: 2852px;
+    height: 864px;
+}
+
+#anchor-3 {
+    visibility: hidden;
+    position: relative;
+    bottom: 2847px;
+    height: 728px;
+} */
 
 /* Footer section */
 .footer {
