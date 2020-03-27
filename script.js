@@ -142,9 +142,10 @@ const PORTFOLIO_BUTTONS = document.getElementById("portfolio__buttons").querySel
 
 document.querySelectorAll(".button").forEach(e => {
     e.addEventListener("click", (event) => {
+        let ACTIVE_NOW = document.querySelector(".chosen-picture");
         PORTFOLIO_BUTTONS.forEach(el => el.classList.remove("active-portfolio"));
         PORTFOLIO_IMAGES.querySelectorAll("li>img").forEach(el => el.classList.remove('chosen-picture'));
-        event.target.classList.add("active-portfolio");
+        ACTIVE_NOW.classList.add('chosen-picture');
 
         let container = document.getElementById('portfolio-pictures');
         let childrenElements = [];
