@@ -1573,8 +1573,97 @@ li.active-portfolio:hover {
         margin: 0 4px;
     }
 
+    /* Quote-block */
+    .quote-block {
+        height: 2250px;
+    }
+
+    .quote__name {
+        top: 120px;
+        left: 10px;
+        width: 900px;
+        font-size: 83px;
+        line-height: 50px;
+    }
+
+    .quote__description {
+        top: 205px;
+        right: 20px;
+        width: 840px;
+        height: 159px;
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    .quote-form {
+        width: 860px;
+        margin-left: 70px;
+    }
+
+    .form-fieldset {
+        top: 600px;
+        right: 160px;
+        left: 10px;
+    }
+
+    .form-fieldset label, input, textarea {
+        width: 100%;
+        height: 105px;
+        margin-bottom: 36px;
+        line-height: 40px;
+        border-radius: 14px;
+    }
+
+    .form-fieldset>::placeholder {
+        font-size: 33px;
+        line-height: 70px;
+    }
+
     #send-button {
+        top: 590px;
+        left: 6px;
         width: inherit;
+        font-size: 40px;
+    }
+
+    .contact-information {
+        top: 601px;
+        left: -6px;
+        width: 860px;
+        height: 175px;
+        font-size: 33px;
+        line-height: 60px;
+    }
+
+    #contact-information__word {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    #contact-information__text {
+        top: 11px;
+        line-height: 60px;
+    }
+
+    .address {
+        top: 31px;
+        left: 4px;
+    }
+
+    #address__location-icon {
+        width: 19px;
+        height: 30px;
+    }
+
+    #address__phone-icon {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    #address__mail-icon {
+        width: 36px;
+        height: 22px;
     }
 
     /* Footer 375*/
