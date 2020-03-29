@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Responsive часть проекта не доделана по всем требованиям, приношу извинения проверяющим. -->
 <html lang="en" id="html">
 <head>
     <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
 <body>
     <header class="header" id="header">
         <h1 id="logo">SINGOLO</h1>
-        <nav>
+        <nav class="wrapper-nav">
             <ul class="navigation" id="navigation">
                 <li class="active" id="home-button">HOME</li>
                 <li class="nav__dot" id="services-button">SERVICES</li>
@@ -51,7 +52,7 @@
             <p class="services__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
                 non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
                 cursus commodo, tortor mauris condimentum nibh.</p>
-            <div class="layout-3-column-2-row row">
+            <div class="layout-3-column-2-row row" id="services-layout768px">
                 <div class="layout__element column small-move">
                     <img class ="icon" src="./assets/icon-pen.png" alt="pen icon">
                     <h3 class="element__name">Custom Design</h3>
@@ -232,10 +233,10 @@
     <footer class="footer">
         <p class="copyright-text">© Copyright 2013</p>
         <div class="footer-social-media">
-            <img src="./assets/logo-facebook.png" alt="Facebook logo">
-            <img src="./assets/logo-google+.png" alt="Google Plus logo">
-            <img src="./assets/logo-twitter.png" alt="Twitter logo">
-            <img src="./assets/logo-linkedin.png" alt="LinkedIn logo">
+            <img class="footer-logo" src="./assets/logo-facebook.png" alt="Facebook logo">
+            <img class="footer-logo" src="./assets/logo-google+.png" alt="Google Plus logo">
+            <img class="footer-logo" src="./assets/logo-twitter.png" alt="Twitter logo">
+            <img class="footer-logo" src="./assets/logo-linkedin.png" alt="LinkedIn logo">
         </div>
     </footer>
     <script src="./script.js"></script>
