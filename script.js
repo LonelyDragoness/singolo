@@ -144,7 +144,7 @@ document.querySelectorAll(".button").forEach(e => {
     e.addEventListener("click", (event) => {
         PORTFOLIO_BUTTONS.forEach(el => el.classList.remove("active-portfolio"));
         PORTFOLIO_IMAGES.querySelectorAll("li>img").forEach(el => el.classList.remove('chosen-picture'));
-
+        event.target.classList.add("active-portfolio");
         let container = document.getElementById('portfolio-pictures');
         let childrenElements = [];
         for (let i = 0; i < container.children.length; i++) {
